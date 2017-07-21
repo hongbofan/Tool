@@ -106,7 +106,7 @@ public class Main extends JFrame {
                     //.parallel()
                     .forEach(file -> {
                         try {
-                            String fileContent = new String(Files.readAllBytes(Paths.get(file.getAbsolutePath())));
+                            String fileContent = new String(Files.readAllBytes(Paths.get(file.getAbsolutePath())),"UTF-8");
                             String[] lines = fileContent.split("\\n");
                             List<String> replaceLines = new ArrayList<>();
                             for (int i=0;i<lines.length;i++) {
